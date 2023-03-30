@@ -109,6 +109,9 @@ function EmblaCarousel(
   ): void {
     const startIndex = selectedScrollSnap()
     deActivate()
+    // Useful when changing the items sizes after the carousel has been initialized.
+    // On resize we need to restore the original sizes and apply them back after reInit.
+    eventHandler.emit('beforeActivate')
     activate(optionsHandler.merge({ startIndex }, withOptions), withPlugins)
     eventHandler.emit('reInit')
   }

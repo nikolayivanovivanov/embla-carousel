@@ -25,6 +25,8 @@ export default [
         format: 'esm',
         strict: true,
         sourcemap: true,
+        // minify
+        // plugins: [terser()],
       },
       {
         file: `${packageJson.name}.umd.js`,

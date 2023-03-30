@@ -11,6 +11,9 @@ export type EmblaEventType =
   | 'destroy'
   | 'reInit'
   | 'resize'
+  // Useful when changing the items sizes after the carousel has been initialized.
+  // On resize we need to restore the original sizes and apply them back after reInit.
+  | 'beforeActivate'
 
 export type EventHandlerType = {
   emit: (evt: EmblaEventType) => EventHandlerType
